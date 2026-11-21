@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selisih Senja — Cari Perbedaannya!</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="hud-left">
+      <h1 id="game-title">Selisih Senja</h1>
+      <p id="level-name">Taman Senja</p>
+    </div>
+    <div class="hud-mid">
+      <div id="counter" title="Perbedaan yang sudah ditemukan">Ditemukan <b id="found-count">0</b> / <b id="total-count">7</b></div>
+      <div id="timer-wrap" title="Sisa waktu">
+        <div id="timer-bar"></div>
+        <span id="timer-text">2:00</span>
+      </div>
+    </div>
+    <div class="hud-right">
+      <div id="score-box">Skor <b id="score">0</b></div>
+      <div id="hearts" title="Kesalahan">❤❤❤</div>
+      <button id="hint-btn" type="button" title="Petunjuk (H)">💡 Petunjuk <span id="hint-count">3</span></button>
+      <button id="sound-btn" type="button" title="Suara (M)">🔊</button>
+    </div>
+  </header>
+
+  <main id="boards">
+    <figure class="panel">
+      <figcaption>Gambar A — asli</figcaption>
+      <canvas id="canvas-a" width="560" height="420"></canvas>
+    </figure>
+    <div id="vs-badge">VS</div>
+    <figure class="panel">
+      <figcaption>Gambar B — ada yang beda!</figcaption>
+      <canvas id="canvas-b" width="560" height="420"></canvas>
+    </figure>
+  </main>
+
+  <p id="message">Klik perbedaan yang kamu temukan di gambar mana saja!</p>
+
+  <div id="overlay" class="hidden">
+    <div id="overlay-card">
+      <h2 id="overlay-title"></h2>
+      <p id="overlay-text"></p>
+      <div id="overlay-stars"></div>
+      <div id="overlay-buttons"></div>
+    </div>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
